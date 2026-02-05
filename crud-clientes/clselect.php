@@ -13,7 +13,7 @@
 
     <?php
         if(isset($_POST["next"])){
-            require("database.php");
+            require("../database.php");
 
             $cpf=htmlentities($_POST["cpf"]);
 
@@ -30,7 +30,7 @@
             while($table = $query->fetch_assoc()){
                 echo "
                     <tr>
-                        <td>$table[id]</td>
+                        <td>$table[id_cliente]</td>
                         <td>$table[cpf]</td>
                         <td>$table[nome]</td>
                     </tr>
@@ -39,6 +39,6 @@
             echo "</table>";
         }
 ?>
-    <a href='clientes.php'><button>VOLTAR</button></a>
+    <a href='../clientes.php'><button>VOLTAR</button></a>
 </body>
 </html>

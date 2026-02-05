@@ -8,7 +8,7 @@
 <body>
     <a href="crud-clientes/cladd.php"><button>ADICIONAR</button></a>
     <a href="crud-clientes/clselect.php"><button>PESQUISAR</button></a>&nbsp&nbsp&nbsp&nbsp;
-    <a href="crud-clientes/cadastro.php"><button style='color:orange'>VOLTAR</button></a>
+    <a href="cadastro.php"><button style='color:orange'>VOLTAR</button></a>
 <br><br>
     <table border="1" width="700">
         <tr align='center'>

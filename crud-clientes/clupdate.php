@@ -1,12 +1,12 @@
 <?php
-require("database.php");
+require("../database.php");
         $id="";
         $cpf="";
         $nome="";
 
         if(isset($_GET["update"])){
             $id=htmlentities($_GET["update"]);
-            $query=$mysqli->query("select*from clientes where id='$id'");
+            $query=$mysqli->query("select*from clientes where id_cliente='$id'");
 
             $table=$query->fetch_assoc();
             $cpf=$table["cpf"];		
@@ -35,11 +35,11 @@ require("database.php");
         $cpf=htmlentities($_POST["cpf"]);
         $nome=htmlentities($_POST["nome"]);
 
-        $mysqli->query("update clientes set cpf='$cpf', nome='$nome' where id='$id'");
+        $mysqli->query("update clientes set cpf='$cpf', nome='$nome' where id_cliente='$id'");
 
         if($mysqli->error == ""){
             echo "<p style='color:green'>ALTERADO COM SUCESSO</p><br>";
-            echo "<a href='clientes.php'><button>VOLTAR</button></a>";   
+            echo "<a href='../clientes.php'><button>VOLTAR</button></a>";   
         }
     }
     ?>
