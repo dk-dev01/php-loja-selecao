@@ -131,7 +131,7 @@ No phpMyAdmin → aba **SQL**, execute os comandos abaixo.
 
 ```sql
 create table clientes (
-    id_cliente int auto_incremet primary key,
+    id_cliente int auto_increment primary key,
     cpf varchar(11),
     nome varchar(50)
 );
@@ -141,7 +141,7 @@ create table clientes (
 
 ```sql
 create table produtos (
-    id_produto int auto_incremet primary key,
+    id_produto int auto_increment primary key,
     nome varchar(50),
     preco DECIMAL(10,2),
     descricao varchar(100)
@@ -152,7 +152,7 @@ create table produtos (
 
 ```sql
 create table vendedores (
-    id_vendedor int auto_incremet primary key,
+    id_vendedor int auto_increment primary key,
     cpf_cnpj varchar(18),
     nome varchar(50),
     empresa varchar(50)
