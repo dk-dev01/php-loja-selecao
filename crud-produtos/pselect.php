@@ -13,7 +13,7 @@
 
     <?php
         if(isset($_POST["next"])){
-            require("database.php");
+            require("../database.php");
 
             $nome=htmlentities($_POST["nome"]);
 
@@ -31,7 +31,7 @@
             while($table = $query->fetch_assoc()){
                 echo "
                     <tr>
-                        <td>$table[id]</td>
+                        <td>$table[id_produto]</td>
                         <td>$table[nome]</td>
                         <td>$table[preco]</td>
                         <td>$table[descricao]</td>
@@ -41,6 +41,6 @@
             echo "</table>";
         }
 ?>
-    <a href='produtos.php'><button>VOLTAR</button></a>
+    <a href='../produtos.php'><button>VOLTAR</button></a>
 </body>
 </html>

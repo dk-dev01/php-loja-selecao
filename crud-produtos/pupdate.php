@@ -1,5 +1,5 @@
 <?php
-require("database.php");
+require("../database.php");
         $id="";
         $nome="";
         $preco="";
@@ -7,7 +7,7 @@ require("database.php");
 
         if(isset($_GET["update"])){
             $id=htmlentities($_GET["update"]);
-            $query=$mysqli->query("select*from produtos where id='$id'");
+            $query=$mysqli->query("select*from produtos where id_produto='$id'");
 
             $table=$query->fetch_assoc();
             $preco=$table["preco"];		
@@ -39,11 +39,11 @@ require("database.php");
         $nome=htmlentities($_POST["nome"]);
         $descricao=htmlentities($_POST["descricao"]);
 
-        $mysqli->query("update produtos set preco='$preco', nome='$nome', descricao='$descricao' where id='$id'");
+        $mysqli->query("update produtos set preco='$preco', nome='$nome', descricao='$descricao' where id_produto='$id'");
 
         if($mysqli->error == ""){
             echo "<p style='color:green'>ALTERADO COM SUCESSO</p><br>";
-            echo "<a href='produtos.php'><button>VOLTAR</button></a>";   
+            echo "<a href='../produtos.php'><button>VOLTAR</button></a>";   
         }
     }
     ?>

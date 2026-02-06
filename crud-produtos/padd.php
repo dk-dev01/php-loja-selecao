@@ -15,7 +15,7 @@
 </form>
     <?php
     if(isset($_POST["next"])){
-        require("database.php");
+        require("../database.php");
 
         $nome=htmlentities($_POST["nome"]);
         $preco=htmlentities($_POST["preco"]);
@@ -25,7 +25,7 @@
 
         if($mysqli->error == ""){
             echo "<p style='color:green'>ADICIONADO COM SUCESSO</p><br>";
-            echo "<a href='produtos.php'><button>VOLTAR</button></a";
+            echo "<a href='../produtos.php'><button>VOLTAR</button></a";
         }
     }
     ?>
