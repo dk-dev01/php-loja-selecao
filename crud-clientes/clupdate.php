@@ -26,7 +26,7 @@ require("../database.php");
     <form method="POST" action="clupdate.php">
         <input type="hidden" name="id" value="<?php echo $id ?>">
         NOME: <input type="text" name="nome"><br>
-        CPF: <input type="text" name="cpf"><br>
+        CPF: <input type="text" name="cpf" maxlength="11"><br>
         <input type="submit" name="next" value="ALTERAR">
 </form>
     <?php

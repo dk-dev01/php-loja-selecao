@@ -9,7 +9,7 @@
     <h1>ADICIONAR CLIENTE</h1><br>
     <form method="POST" action="cladd.php">
         NOME: <input type="text" name="nome"><br>
-        CPF: <input type="text" name="cpf"><br>
+        CPF: <input type="text" name="cpf" maxlength="11"><br>
         <input type="submit" name="next" value="ADICIONAR">
 </form>
     <?php
